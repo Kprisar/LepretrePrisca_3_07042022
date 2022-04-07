@@ -9,6 +9,9 @@ body {
   margin: 0px;
   font-family: "Roboto", sans-serif; }
 
+main {
+  padding: 0px 16px; }
+
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -50,5 +53,44 @@ header {
     transform: scale(1.02);
     opacity: 0.9;
     cursor: pointer; }
+
+.tuto {
+  counter-reset: steps; }
+  .tuto ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; }
+    @media (max-width: 950px) {
+      .tuto ol {
+        flex-direction: column; } }
+  .tuto li {
+    position: relative;
+    list-style-type: none;
+    background-color: #f6f6f6;
+    padding: 20px 32px;
+    flex-grow: 1;
+    border-radius: 16px;
+    box-shadow: 0 0 0.5rem black;
+    margin: 10px; }
+    .tuto li::before {
+      content: counter(steps);
+      counter-increment: steps;
+      color: white;
+      background-color: #9356DC;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 15px;
+      left: -15px; }
+    .tuto li:hover {
+      transform: scale(1.02); }
+    .tuto li i.fa-solid {
+      margin-right: 20px;
+      color: #7e7e7e;
+      font-size: 20px; }
 
 /*# sourceMappingURL=style.css.map */
