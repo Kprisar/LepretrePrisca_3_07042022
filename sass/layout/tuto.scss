@@ -8,6 +8,7 @@
 
 .tuto {
     counter-reset: steps;
+    margin-bottom: 32px;
     & ol{
         display: flex;
         flex-wrap: wrap;
@@ -16,6 +17,9 @@
             flex-direction: column;
         }
         
+    }
+    & h2 {
+        margin-left: 40px;
     }
     & li {
         position: relative;
@@ -31,9 +35,11 @@
             justify-content: center;
             border-radius: 50%;
             position: absolute;
-            bottom: 15px;
             left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
         }
+        
         list-style-type: none;
         background-color: #f6f6f6;
         padding: 20px 32px;
@@ -41,15 +47,15 @@
         border-radius: 16px;
         @include base-shadow;
         margin: 10px;
+        margin-right: 43px;
         &:hover{
             @include transform-zoom;
         }
     
-    & i.fa-solid{
-        margin-right: 20px;
-        color: $lightgrey;
-        font-size: 20px;
-    }
+        & i.fa-solid{
+            margin-right: 20px;
+            color: $lightgrey;
+            font-size: 20px;
+        }
     }
 }
-
