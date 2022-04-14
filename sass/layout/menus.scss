@@ -27,10 +27,6 @@
         
 .card {
     flex-grow: 1; 
-    min-width: 30rem;
-    background-color: white; 
-    box-shadow: 6px 6px 4px #e7e7e7;
-    border-radius: 15px; 
     display: flex;
     flex-direction: column; 
             
@@ -40,22 +36,29 @@
             object-fit: cover;
             display: flex;
             }
+
         &__description{
             position: relative;
             display: flex;
             flex-direction: column;
-            & > h3 {
+            min-width: 30rem;
+            background-color: white; 
+            box-shadow: 6px 6px 4px #e7e7e7;
+            border-radius: 0px 0px 15px 15px;
+            }
+
+            
+            & h3 {
                 margin-left: 16px;
                 margin-bottom: -10px;
                 font-size: 20px;
                 }
-                & > p{
+                & p{
                 margin-left: 16px;
                 font-size: 15px;
         }
-       
     }
-}
+
 
 .new{
     position: relative;
@@ -101,5 +104,8 @@
     .menus .card {
         width:175px;
         min-width: 0rem;
+    }
+    .card__description {
+        min-width: 18rem;
     }
 }
