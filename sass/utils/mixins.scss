@@ -1,0 +1,36 @@
+
+@mixin base-shadow {
+    box-shadow: 6px 6px 4px #e7e7e7;
+}
+
+
+@mixin gradient {
+    background-image: linear-gradient(to top, #9356DC, #ff79DA);
+}
+
+
+@mixin transform-zoom {
+    transform: scale(1.02);
+}
+
+@mixin heart {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family:"Font Awesome 5 Free";
+    font-weight: 400;
+    content:"\f004";
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    transform: translateY(5%);
+    color: black;
+    background-clip:text;
+    -webkit-background-clip:text;
+    opacity: 1;
+    transform: all 200ms ease-in-out;
+    
+}
