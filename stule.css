@@ -169,13 +169,6 @@ header {
     width: 175px;
     min-width: 0rem; } }
 footer {
-  background-color: #353535;
-  padding: 0px 40px;
-  color: white;
-  height: 230px; }
-  footer h2 {
-    font-family: "Shrikhand", "sanns-serif";
-    padding-top: 14px;
-    font-size: 30px; }
+  background-color: #353535; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=stule.css.map */
