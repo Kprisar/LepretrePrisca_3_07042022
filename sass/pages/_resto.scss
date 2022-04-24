@@ -1,0 +1,159 @@
+
+
+
+
+.banner img{
+    display: block;
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    object-position: center bottom;
+    margin-bottom: 40px;
+    
+}
+.resto{
+    
+    &__tittle h2 {
+    font-family:'Shrikhand';
+    font-weight: 200;
+    font-size: 30px;
+    padding-left: 40px;
+    padding-top: 20px;
+    background-color:$lightergrey;
+    position: relative;
+    margin-top: -57px;
+    border-radius: 20px 20px 0px 0px;
+    margin-bottom: 0px;
+}
+}
+.resto-main {
+    background-color: $lightergrey;
+    height: 140px;
+    & h3 {
+        margin-top: 0px;
+        margin-left: 23px;
+        padding-top: 20px;
+        text-transform: uppercase;
+        font-weight: 400;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 43px;
+            height: 0.25rem;
+            width: 50px;
+            left: 1px;
+            background-color: $tertiary;
+        }
+    }
+}
+
+    p {
+            margin-top: 5px;
+            padding: 0px 18px;
+            font-size: 14px;
+
+        }
+
+.menus__simple {
+    margin-right: 20px;
+}
+
+
+
+.menus__category{
+    background-color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-radius: 20px;
+    margin-left: 20px;
+    filter: drop-shadow(2px 1px 5px $lightgrey);
+        
+        .menus-item {
+            display: flex;
+            height: 63px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+}
+.menus__category
+    .menus-item__check{
+    background-color: $tertiary;
+    $button-width:55px;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    margin-right: -1 * $button-width;
+    width: $button-width;
+    border-radius: 0px 16px 16px 0px;
+    transition: margin-right 0.5s;
+    flex-shrink: 0;
+        
+        & i {
+            display: flex;
+            align-items: center;
+            place-content: center;
+            background: white;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            color:$tertiary;
+            }
+            &:hover {
+                @include quarterspin;
+                animation:animation-name;$quarterspin:0.5s ease-in-out;
+        }
+            }
+            
+            
+        
+
+
+
+:hover {
+    .menus-item__check{
+        margin-right: 0px;
+        cursor: pointer;
+    }
+    
+}
+
+.menus-item__description {
+    overflow: hidden;
+   h4 {
+    font-size: 200;
+    margin-top: 6px;
+    margin-bottom: 0px;
+    padding: 5px 0px 0px 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+        p {
+        margin-top: 5px;
+        padding: 0px 18px;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}    
+
+.menus-item__prix {
+    margin-left: auto;
+    font-weight: 900;
+    padding: 16px;
+    display: flex;
+    padding-top: 28px;
+}
+
+
+section.order {
+    height: 40vh;   
+    display: grid;
+    place-items: center;
+    button {
+        @include base-button;
+    }
+}

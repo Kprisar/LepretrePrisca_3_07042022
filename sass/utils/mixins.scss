@@ -12,3 +12,24 @@
 @mixin transform-zoom {
     transform: scale(1.02);
 }
+
+
+@mixin base-button {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 32px;
+    transition: transform 200ms;
+    margin-top: 18px;
+    cursor: pointer;
+    @include base-shadow;
+    @include gradient;
+    &:hover {
+        transform: scale(1.02);
+        opacity: 0.9;
+        cursor: pointer;
+        }
+}
+
