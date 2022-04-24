@@ -47,6 +47,17 @@
                 background-color: white; 
                 box-shadow: 6px 6px 4px #e7e7e7;
                 border-radius: 0px 0px 15px 15px;
+                &::before {
+                    @include heart;
+                }
+                &::after {
+                    @include heart ($opacity:0, $font-weight:900, $color: transparent);
+                    @include gradient;
+                    
+                }
+                &:hover::after {
+                opacity: 1;
+                transform: translate(-50%) scale (1.2);
                 }
     
                 
@@ -62,14 +73,14 @@
         }
     
     
-    .new{
+    &.new{
         position: relative;
     }
     
-    .new::before{
+    &.new::before{
         content:"Nouveau";
         position: absolute;
-        height: 40px;
+        height: 30px;
         width: 80px;
         background-color:$tertiary;
         color: darken($tertiary, 50%);
@@ -79,28 +90,7 @@
         top: 16px;
     }
     
-    .card__description {
-        i {
-            font-size: 30px;
-            position: absolute;
-            right: 20px;
-            top: 30%;
-            
-        }
-        .fas {
-            color: transparent;
-            @include gradient;
-            background-clip:text;
-            -webkit-background-clip:text;
-            opacity: 0;
-            transform: all 200ms ease-in-out;
-        }
-        &:hover .fas {
-            opacity: 1;
-            transform: scale(1.2);
-            cursor: pointer;
-        }
-    }
+    
     
     @media (max-width:375px){
         .menus .card {
@@ -111,4 +101,5 @@
             min-width: 18rem;
         }
     }
+}
 }
