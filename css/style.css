@@ -21,6 +21,7 @@ header {
   padding: 6px;
   margin: 0px;
   position: relative;
+  font-size: 22px;
 }
 
 .city {
@@ -115,7 +116,7 @@ header {
   transform: translateY(-50%);
 }
 .tuto li:hover {
-  transform: scale(1.02);
+  transform: none scale(1.02);
 }
 .tuto li i.fa-solid {
   margin-right: 20px;
@@ -166,12 +167,12 @@ header {
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
+  position: absolute;
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
   content: "\f004";
   font-size: 30px;
-  position: absolute;
   right: 20px;
   top: 30%;
   color: black;
@@ -185,12 +186,12 @@ header {
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
+  position: absolute;
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f004";
   font-size: 30px;
-  position: absolute;
   right: 20px;
   top: 30%;
   color: transparent;
@@ -242,11 +243,32 @@ footer {
   background-color: #353535;
   padding: 0px 40px;
   color: white;
-  height: 230px;
 }
 footer h2 {
   font-family: "Shrikhand", "sans-serif";
   padding-top: 14px;
+  font-size: 30px;
+}
+
+header::before {
+  transition: transform 200ms;
+}
+header:hover::before {
+  transform: translateY(-50%) scale(1.2);
+}
+header::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  position: absolute;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f060";
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 30px;
 }
 
@@ -270,6 +292,49 @@ footer h2 {
   margin-top: -57px;
   border-radius: 20px 20px 0px 0px;
   margin-bottom: 0px;
+}
+.resto__tittle h2::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  position: absolute;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 30px;
+  right: 20px;
+  top: 30%;
+  color: black;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transform: all 200ms ease-in-out;
+}
+.resto__tittle h2::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  position: absolute;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+  font-size: 30px;
+  right: 20px;
+  top: 30%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transform: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, #9356DC, #ff79DA);
+}
+.resto__tittle h2:hover::after {
+  opacity: 1;
+  transform: translate(-50%) scale 1.2;
 }
 
 .resto-main {
@@ -408,6 +473,10 @@ section.order button:hover {
   transform: scale(1.02);
   opacity: 0.9;
   cursor: pointer;
+}
+
+footer {
+  margin-top: 320px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,21 @@
 
 
+header {
+    &::before {
+        transition: transform 200ms;
+    }
+    &:hover::before {
+        @include transform-zoom ($zoom-level:1.20, $transformation: translateY(-50%));
+    }
+    &::before {
+    @include font-awesome ($font-weight: 900);
+    content:"\f060";
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    }
+}   
 
 
 .banner img{
@@ -24,6 +40,19 @@
     margin-top: -57px;
     border-radius: 20px 20px 0px 0px;
     margin-bottom: 0px;
+
+    &::before {
+        @include heart;
+    }
+    &::after {
+        @include heart ($opacity:0, $font-weight:900, $color: transparent);
+        @include gradient;
+        
+    }
+    &:hover::after {
+    opacity: 1;
+    transform: translate(-50%) scale (1.2);
+    }
 }
 }
 .resto-main {
@@ -108,11 +137,6 @@
         }
             }
             
-            
-        
-
-
-
 :hover {
     .menus-item__check{
         margin-right: 0px;
@@ -156,4 +180,9 @@ section.order {
     button {
         @include base-button;
     }
+}
+
+
+footer {
+    margin-top: 320px;
 }
