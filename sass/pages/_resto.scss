@@ -1,9 +1,7 @@
 
 
 header {
-    &::before {
-        transition: transform 200ms;
-    }
+    
     &:hover::before {
         @include transform-zoom ($zoom-level:1.20, $transformation: translateY(-50%));
     }
@@ -13,6 +11,7 @@ header {
     left: 30px;
     top: 50%;
     transform: translateY(-50%);
+    transition: transform 200ms;
     font-size: 30px;
     }
 }   
@@ -57,7 +56,6 @@ header {
 }
 .resto-main {
     background-color: $lightergrey;
-    height: 140px;
     & h3 {
         margin-top: 0px;
         margin-left: 23px;
@@ -86,6 +84,8 @@ header {
 
 .menus__simple {
     margin-right: 20px;
+    margin-bottom: 20px;
+    
 }
 
 
@@ -98,6 +98,17 @@ header {
     border-radius: 20px;
     margin-left: 20px;
     filter: drop-shadow(2px 1px 5px $lightgrey);
+    animation: appear 1s;
+    @for $i from 1 through 3{
+        &:nth-child(#{$i}) {
+        animation-delay: 100ms *$i;
+        }
+        }
+    
+   
+}
+
+    
         i {
             display: flex;
             align-items: center;
@@ -107,6 +118,7 @@ header {
             width: 32px;
             border-radius: 50%;
             color:$tertiary;
+            
         }
             :hover {
                 .menus-item__check{
@@ -115,7 +127,7 @@ header {
             }
             
         }
-}
+
 
 .menus-item {
     display: flex;
@@ -123,6 +135,7 @@ header {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    
         &__check {
         background-color: $tertiary;
         $button-width:55px;
@@ -142,8 +155,9 @@ header {
 
 .menus-item__description {
     overflow: hidden;
+    
    h4 {
-    font-size: 200;
+    font-size: 18px;
     margin-top: 6px;
     margin-bottom: 0px;
     padding: 5px 0px 0px 20px;
@@ -165,11 +179,11 @@ header {
     padding: 16px;
     display: flex;
     padding-top: 28px;
+    
 }
 
 
-section.order {
-    height: 40vh;   
+section.order {   
     display: grid;
     place-items: center;
     button {
@@ -177,7 +191,3 @@ section.order {
     }
 }
 
-
-footer {
-    margin-top: 320px;
-}

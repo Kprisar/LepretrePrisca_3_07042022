@@ -1,5 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap");
+@keyframes quaterspin {
+  0% {
+    transform: rotate -270deg;
+  }
+  100% {
+    transform: rotate 0;
+  }
+}
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 body {
   margin: 0px;
   font-family: "Roboto", sans-serif;
@@ -250,9 +266,6 @@ footer h2 {
   font-size: 30px;
 }
 
-header::before {
-  transition: transform 200ms;
-}
 header:hover::before {
   transform: translateY(-50%) scale(1.2);
 }
@@ -269,6 +282,7 @@ header::before {
   left: 30px;
   top: 50%;
   transform: translateY(-50%);
+  transition: transform 200ms;
   font-size: 30px;
 }
 
@@ -339,7 +353,6 @@ header::before {
 
 .resto-main {
   background-color: #F6f6f6;
-  height: 140px;
 }
 .resto-main h3 {
   margin-top: 0px;
@@ -367,6 +380,7 @@ p {
 
 .menus__simple {
   margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .menus__category {
@@ -377,8 +391,19 @@ p {
   border-radius: 20px;
   margin-left: 20px;
   filter: drop-shadow(2px 1px 5px #7e7e7e);
+  animation: appear 1s;
 }
-.menus__category i {
+.menus__category:nth-child(1) {
+  animation-delay: 100ms;
+}
+.menus__category:nth-child(2) {
+  animation-delay: 200ms;
+}
+.menus__category:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+i {
   display: flex;
   align-items: center;
   place-content: center;
@@ -388,7 +413,8 @@ p {
   border-radius: 50%;
   color: #99E2D0;
 }
-.menus__category :hover .menus-item__check {
+
+:hover .menus-item__check {
   margin-right: 0px;
   cursor: pointer;
 }
@@ -416,7 +442,7 @@ p {
   overflow: hidden;
 }
 .menus-item__description h4 {
-  font-size: 200;
+  font-size: 18px;
   margin-top: 6px;
   margin-bottom: 0px;
   padding: 5px 0px 0px 20px;
@@ -440,7 +466,6 @@ p {
 }
 
 section.order {
-  height: 40vh;
   display: grid;
   place-items: center;
 }
@@ -461,10 +486,6 @@ section.order button:hover {
   transform: scale(1.02);
   opacity: 0.9;
   cursor: pointer;
-}
-
-footer {
-  margin-top: 320px;
 }
 
 /*# sourceMappingURL=style.css.map */
