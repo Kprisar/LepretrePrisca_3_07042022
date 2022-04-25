@@ -98,30 +98,7 @@ header {
     border-radius: 20px;
     margin-left: 20px;
     filter: drop-shadow(2px 1px 5px $lightgrey);
-        
-        .menus-item {
-            display: flex;
-            height: 63px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
-
-}
-.menus__category
-    .menus-item__check{
-    background-color: $tertiary;
-    $button-width:55px;
-    display: flex;
-    place-items: center;
-    place-content: center;
-    margin-right: -1 * $button-width;
-    width: $button-width;
-    border-radius: 0px 16px 16px 0px;
-    transition: margin-right 0.5s;
-    flex-shrink: 0;
-        
-        & i {
+        i {
             display: flex;
             align-items: center;
             place-content: center;
@@ -130,20 +107,38 @@ header {
             width: 32px;
             border-radius: 50%;
             color:$tertiary;
-            }
-            &:hover {
-                @include quarterspin;
-                animation:animation-name;$quarterspin:0.5s ease-in-out;
         }
+            :hover {
+                .menus-item__check{
+                    margin-right: 0px;
+                    cursor: pointer;
             }
             
-:hover {
-    .menus-item__check{
-        margin-right: 0px;
-        cursor: pointer;
-    }
-    
+        }
 }
+
+.menus-item {
+    display: flex;
+    height: 63px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+        &__check {
+        background-color: $tertiary;
+        $button-width:55px;
+        display: flex;
+        place-items: center;
+        place-content: center;
+        margin-right: -1 * $button-width;
+        width: $button-width;
+        border-radius: 0px 16px 16px 0px;
+        transition: margin-right 0.5s;
+        flex-shrink: 0;
+        }
+    }   
+            
+            
+
 
 .menus-item__description {
     overflow: hidden;
