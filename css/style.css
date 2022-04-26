@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap");
-@keyframes quaterspin {
+@-webkit-keyframes quaterspin {
   0% {
-    transform: rotate -270deg;
+    -webkit-transform: rotate(-270deg);
   }
   100% {
-    transform: rotate 0;
+    -webkit-transform: rotate(0deg);
   }
 }
 @keyframes appear {
@@ -393,40 +393,14 @@ p {
   filter: drop-shadow(2px 1px 5px #7e7e7e);
   animation: appear 1s;
 }
-.menus__category:nth-child(1) {
-  animation-delay: 100ms;
-}
-.menus__category:nth-child(2) {
-  animation-delay: 200ms;
-}
-.menus__category:nth-child(3) {
-  animation-delay: 300ms;
-}
-
-i {
-  display: flex;
-  align-items: center;
-  place-content: center;
-  background: white;
-  height: 32px;
-  width: 32px;
-  border-radius: 50%;
-  color: #99E2D0;
-}
-
-:hover .menus-item__check {
-  margin-right: 0px;
-  cursor: pointer;
-}
-
-.menus-item {
+.menus__category .menus-item {
   display: flex;
   height: 63px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menus-item__check {
+.menus__category .menus-item__check {
   background-color: #99E2D0;
   display: flex;
   place-items: center;
@@ -436,6 +410,24 @@ i {
   border-radius: 0px 16px 16px 0px;
   transition: margin-right 0.5s;
   flex-shrink: 0;
+}
+.menus__category .menus-item i {
+  display: flex;
+  align-items: center;
+  place-content: center;
+  background: white;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  color: #99E2D0;
+}
+.menus__category:hover .menus-item__check {
+  margin-right: 0px;
+  cursor: pointer;
+}
+
+.menus-item__check i:hover {
+  -webkit-animation: quaterspin 0.6s ease-in-out;
 }
 
 .menus-item__description {
