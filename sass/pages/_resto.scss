@@ -56,6 +56,13 @@ header {
 }
 .resto-main {
     background-color: $lightergrey;
+    display: flex;
+    flex-direction: column;
+}
+.menus {
+    display: flex;
+    flex-direction: column;
+    
     & h3 {
         margin-top: 0px;
         margin-left: 23px;
@@ -72,115 +79,22 @@ header {
             left: 1px;
             background-color: $tertiary;
         }
-    }
-}
+    
 
-    p {
+
+    & p {
             margin-top: 5px;
             padding: 0px 18px;
             font-size: 14px;
 
         }
 
-.menus__simple {
-    margin-right: 20px;
-    margin-bottom: 20px;
-    
-}
-
-
-
-.menus__category{
-    background-color: white;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    border-radius: 20px;
-    margin-left: 20px;
-    filter: drop-shadow(2px 1px 5px $lightgrey);
-    animation: appear 1s;
-
-    .menus-item {
-        display: flex;
-        height: 63px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        
-            &__check {
-            background-color: $tertiary;
-            $button-width:55px;
-            display: flex;
-            place-items: center;
-            place-content: center;
-            margin-right: -1 * $button-width;
-            width: $button-width;
-            border-radius: 0px 16px 16px 0px;
-            transition: margin-right 0.5s;
-            flex-shrink: 0;
-            } 
-    
-                i {
-                display: flex;
-                align-items: center;
-                place-content: center;
-                background: white;
-                height: 32px;
-                width: 32px;
-                border-radius: 50%;
-                color:$tertiary;
-                     }
-            }
-            
-                     &:hover {
-                        .menus-item__check{
-                         margin-right: 0px;
-                        cursor: pointer;
-                        }
-                        
-            
-                    }
-}
-
-.menus-item__check i:hover {
-    -webkit-animation: quaterspin 0.6s ease-in-out;
-}
-
-.menus-item__description {
-    overflow: hidden;
-    
-   h4 {
-    font-size: 18px;
-    margin-top: 6px;
-    margin-bottom: 0px;
-    padding: 5px 0px 0px 20px;
-    overflow: hidden;
-    text-overflow: ellipsis;
     }
-        p {
-        margin-top: 5px;
-        padding: 0px 18px;
-        font-size: 14px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-}    
-
-.menus-item__prix {
-    margin-left: auto;
-    font-weight: 900;
-    padding: 16px;
-    display: flex;
-    padding-top: 28px;
-    
 }
-
-
-
 
 section.order {   
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: center;
     button {
         @include base-button;
     }
