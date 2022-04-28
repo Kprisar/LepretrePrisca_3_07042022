@@ -32,7 +32,7 @@ header {
     font-family:'Shrikhand';
     font-weight: 200;
     font-size: 30px;
-    padding-left: 40px;
+    padding-left: 24px;
     padding-top: 20px;
     background-color:$lightergrey;
     position: relative;
@@ -59,7 +59,7 @@ header {
     display: flex;
     flex-direction: column;
 }
-.menus {
+.menu {
     display: flex;
     flex-direction: column;
     
@@ -92,9 +92,9 @@ header {
     }
 }
 
-section.order {   
-    display: flex;
-    flex-direction: center;
+section.order {  
+    display: grid;
+    place-items: center;
     button {
         @include base-button;
     }

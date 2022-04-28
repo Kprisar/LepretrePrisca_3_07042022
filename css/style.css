@@ -134,7 +134,9 @@ header {
   transform: translateY(-50%);
 }
 .tuto li:hover {
-  transform: none scale(1.02);
+  transform: scale(1.02);
+  opacity: 0.9;
+  cursor: pointer;
 }
 .tuto li i.fa-solid {
   margin-right: 20px;
@@ -227,10 +229,12 @@ header {
   margin-left: 16px;
   margin-bottom: -10px;
   font-size: 20px;
+  margin-top: 6px;
 }
 #homepage .card__description p {
   margin-top: 14px;
   font-size: 15px;
+  margin-left: 17px;
 }
 #homepage .card.new {
   position: relative;
@@ -265,7 +269,10 @@ footer {
 footer h2 {
   font-family: "Shrikhand", "sans-serif";
   padding-top: 14px;
-  font-size: 30px;
+  font-size: 20px;
+}
+footer p {
+  font-size: 12px;
 }
 
 header:hover::before {
@@ -301,7 +308,7 @@ header::before {
   font-family: "Shrikhand";
   font-weight: 200;
   font-size: 30px;
-  padding-left: 40px;
+  padding-left: 24px;
   padding-top: 20px;
   background-color: #F6f6f6;
   position: relative;
@@ -359,11 +366,11 @@ header::before {
   flex-direction: column;
 }
 
-.menus {
+.menu {
   display: flex;
   flex-direction: column;
 }
-.menus h3 {
+.menu h3 {
   margin-top: 0px;
   margin-left: 23px;
   padding-top: 20px;
@@ -371,7 +378,7 @@ header::before {
   font-weight: 400;
   position: relative;
 }
-.menus h3::after {
+.menu h3::after {
   content: "";
   position: absolute;
   top: 43px;
@@ -380,15 +387,15 @@ header::before {
   left: 1px;
   background-color: #99E2D0;
 }
-.menus h3 p {
+.menu h3 p {
   margin-top: 5px;
   padding: 0px 18px;
   font-size: 14px;
 }
 
 section.order {
-  display: flex;
-  flex-direction: center;
+  display: grid;
+  place-items: center;
 }
 section.order button {
   color: white;
@@ -457,9 +464,11 @@ section.order button:hover {
   border-radius: 50%;
   color: #99E2D0;
 }
+.dish:hover {
+  cursor: pointer;
+}
 .dish:hover .dish__check {
   margin-right: 0px;
-  cursor: pointer;
 }
 .dish:hover i {
   animation: quaterspin 0.6s ease-in-out;

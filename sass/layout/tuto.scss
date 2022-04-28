@@ -49,7 +49,9 @@
         margin: 10px;
         margin-right: 43px;
         &:hover{
-            @include transform-zoom;
+            transform: scale(1.02);
+            opacity: 0.9;
+            cursor: pointer;
         }
     
         & i.fa-solid{
