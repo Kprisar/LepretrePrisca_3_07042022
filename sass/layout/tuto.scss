@@ -1,10 +1,4 @@
 
-@import "../utils/mixins.scss";
-@import "../utils/variables.scss";
-@import "../utils/colors.scss";
-
-
-
 
 .tuto {
     counter-reset: steps;
@@ -28,8 +22,8 @@
             counter-increment: steps;
             color: white;
             background-color: $primary;
-            width: $tuto-base-height;
-            height: $tuto-base-height;
+            width: 20px;
+            height: 20px;
             display: flex;
             align-items: center;
             justify-content: center;

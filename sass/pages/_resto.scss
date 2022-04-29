@@ -1,11 +1,7 @@
 
 
 header {
-    
-    &:hover::before {
-        @include transform-zoom ($zoom-level:1.20, $transformation: translateY(-50%));
-    }
-    &::before {
+    ::before {
     @include font-awesome ($font-weight: 900);
     content:"\f060";
     left: 30px;
@@ -13,8 +9,12 @@ header {
     transform: translateY(-50%);
     transition: transform 200ms;
     font-size: 30px;
+        &:hover::before {
+        @include transform-zoom ($zoom-level:1.20, $transformation: translateY(-50%));
     }
-}   
+}  
+}
+
 
 
 .banner img{
@@ -95,6 +95,7 @@ header {
 section.order {  
     display: grid;
     place-items: center;
+    height: 120px;
     button {
         @include base-button;
     }
