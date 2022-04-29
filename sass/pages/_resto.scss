@@ -1,6 +1,13 @@
 
 
-header {
+.tittle header {
+    font-family: "Shrikhand", cursive;
+    text-align: center;
+    box-shadow: 0 0 0.5rem black;
+    padding: 6px;
+    margin: 0px;
+    position: relative;
+    font-size: 22px;
     ::before {
     @include font-awesome ($font-weight: 900);
     content:"\f060";
@@ -57,11 +64,25 @@ header {
 .resto-main {
     background-color: $lightergrey;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    
+    
+    @media (max-width: 1195px) {
+        flex-direction: column;
+       flex-wrap: nowrap;
+    }
+
 }
 .menu {
     display: flex;
     flex-direction: column;
+    width: 32%;
+    margin-left: 13px;
+    @media (max-width: 1195px) {
+        width: 100%;
+        margin-left: 0px;
+    }
+    
     
     & h3 {
         margin-top: 0px;
@@ -93,11 +114,18 @@ header {
 }
 
 section.order {  
-    display: grid;
+    display: flex;
     place-items: center;
+    justify-content: center;
+    flex-direction: column;
     height: 120px;
+    width: 120%;
+    
     button {
         @include base-button;
+    }
+    @media (max-width: 1190px) {
+        width: 100%;
     }
 }
 

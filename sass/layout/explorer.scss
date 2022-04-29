@@ -2,8 +2,12 @@
 
 .explorer {
     text-align: center;
+    background-color: $lightergrey;
+    height: 24vh;
     & h2 {
         font-size: 32px;
+        margin-top: 0px;
+        padding-top: 14px;
     }
     & p {
         font-size: 16px;
@@ -22,3 +26,43 @@
     }
 }   
   
+.loader {
+    position: fixed;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    background-color: #ffff;
+    opacity: 0.9;
+    height: 100vh;
+    inset: 0;
+    z-index: 1;
+    animation: disappear 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    transform-origin: top;
+    &::after {
+        content:"";
+        height: 100px;
+        width: 100px;
+        border-right: 5px solid $secondary;
+        border-top: 5px solid $primary;
+        border-radius: 50%;
+        animation: spin 3s linear;
+        animation-iteration-count: 2;
+    }
+}
+
+@keyframes disappear {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

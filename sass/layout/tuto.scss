@@ -46,12 +46,19 @@
             transform: scale(1.02);
             opacity: 0.9;
             cursor: pointer;
+            background-color: #eae4f1;
+            i.fa-solid {
+                color: $primary;
+            }
+            
         }
     
         & i.fa-solid{
             margin-right: 20px;
             color: $lightgrey;
             font-size: 20px;
+            
+
         }
     }
 }

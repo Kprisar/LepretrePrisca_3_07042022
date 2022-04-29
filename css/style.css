@@ -47,7 +47,7 @@ header {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: #f3f3f3;
+  background-color: #f1ecec;
   text-align: center;
   padding: 10px;
   height: 35px;
@@ -55,7 +55,7 @@ header {
 .city input {
   flex-basis: 300px;
   border: 0px;
-  background-color: #f3f3f3;
+  background-color: #f1ecec;
   font-size: 20px;
 }
 .city i {
@@ -66,9 +66,13 @@ header {
 
 .explorer {
   text-align: center;
+  background-color: #F6f6f6;
+  height: 24vh;
 }
 .explorer h2 {
   font-size: 32px;
+  margin-top: 0px;
+  padding-top: 14px;
 }
 .explorer p {
   font-size: 16px;
@@ -95,6 +99,45 @@ header {
 @media (max-width: 575px) {
   .explorer h2 {
     font-size: 25px;
+  }
+}
+.loader {
+  position: fixed;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  background-color: white;
+  opacity: 0.9;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  animation: disappear 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  transform-origin: top;
+}
+.loader::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-right: 5px solid #FF79DA;
+  border-top: 5px solid #9356DC;
+  border-radius: 50%;
+  animation: spin 3s linear;
+  animation-iteration-count: 2;
+}
+
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 .tuto {
@@ -145,6 +188,10 @@ header {
   transform: scale(1.02);
   opacity: 0.9;
   cursor: pointer;
+  background-color: #eae4f1;
+}
+.tuto li:hover i.fa-solid {
+  color: #9356DC;
 }
 .tuto li i.fa-solid {
   margin-right: 20px;
@@ -286,7 +333,16 @@ footer p {
   font-size: 12px;
 }
 
-header ::before {
+.tittle header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0 0 0.5rem black;
+  padding: 6px;
+  margin: 0px;
+  position: relative;
+  font-size: 22px;
+}
+.tittle header ::before {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -302,7 +358,7 @@ header ::before {
   transition: transform 200ms;
   font-size: 30px;
 }
-header ::before:hover::before {
+.tittle header ::before:hover::before {
   transform: translateY(-50%) scale(1.2);
 }
 
@@ -374,12 +430,26 @@ header ::before:hover::before {
 .resto-main {
   background-color: #F6f6f6;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+}
+@media (max-width: 1195px) {
+  .resto-main {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 }
 
 .menu {
   display: flex;
   flex-direction: column;
+  width: 32%;
+  margin-left: 13px;
+}
+@media (max-width: 1195px) {
+  .menu {
+    width: 100%;
+    margin-left: 0px;
+  }
 }
 .menu h3 {
   margin-top: 0px;
@@ -405,9 +475,12 @@ header ::before:hover::before {
 }
 
 section.order {
-  display: grid;
+  display: flex;
   place-items: center;
+  justify-content: center;
+  flex-direction: column;
   height: 120px;
+  width: 120%;
 }
 section.order button {
   color: white;
@@ -426,6 +499,11 @@ section.order button:hover {
   transform: scale(1.02);
   opacity: 0.9;
   cursor: pointer;
+}
+@media (max-width: 1190px) {
+  section.order {
+    width: 100%;
+  }
 }
 
 .dish {
