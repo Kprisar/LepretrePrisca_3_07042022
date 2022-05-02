@@ -46,7 +46,7 @@
             transform: scale(1.02);
             opacity: 0.9;
             cursor: pointer;
-            background-color: #eae4f1;
+            background-color: lighten($primary, $amount: 35);
             i.fa-solid {
                 color: $primary;
             }

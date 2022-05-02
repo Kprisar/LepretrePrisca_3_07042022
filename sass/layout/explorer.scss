@@ -3,7 +3,7 @@
 .explorer {
     text-align: center;
     background-color: $lightergrey;
-    height: 24vh;
+    height: 26vh;
     & h2 {
         font-size: 32px;
         margin-top: 0px;
@@ -44,6 +44,7 @@
         content:"Oh my food";
         font-size: 50px;
         font-family: "Shrikhand";
+        color: $primary;
         animation:rotate-in-center 2s both;
         
     }

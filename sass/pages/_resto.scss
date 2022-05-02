@@ -57,7 +57,7 @@
     }
     &:hover::after {
     opacity: 1;
-    transform: translate(-50%) scale (1.2);
+    transform: translate(-50%) scaleX(1.2) scaleY(1.2);
     }
 }
 }

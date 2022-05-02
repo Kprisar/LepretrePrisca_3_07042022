@@ -53,7 +53,7 @@ header {
   height: 35px;
 }
 .city input {
-  flex-basis: 300px;
+  flex-basis: 180px;
   border: 0px;
   background-color: #f1ecec;
   font-size: 20px;
@@ -67,7 +67,7 @@ header {
 .explorer {
   text-align: center;
   background-color: #F6f6f6;
-  height: 24vh;
+  height: 26vh;
 }
 .explorer h2 {
   font-size: 32px;
@@ -120,6 +120,7 @@ header {
   content: "Oh my food";
   font-size: 50px;
   font-family: "Shrikhand";
+  color: #9356DC;
   animation: rotate-in-center 2s both;
 }
 
@@ -189,7 +190,7 @@ header {
   transform: scale(1.02);
   opacity: 0.9;
   cursor: pointer;
-  background-color: #eae4f1;
+  background-color: #f2eafb;
 }
 .tuto li:hover i.fa-solid {
   color: #9356DC;
@@ -223,6 +224,7 @@ header {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  width: 600px;
 }
 #homepage .card__image {
   height: 16rem;
@@ -256,7 +258,7 @@ header {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transform: all 200ms ease-in-out;
+  transform: all 0.2ms ease-in-out;
 }
 #homepage .card__description::after {
   display: inline-block;
@@ -275,12 +277,12 @@ header {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transform: all 200ms ease-in-out;
+  transform: all 0.2ms ease-in-out;
   background-image: linear-gradient(to top, #9356DC, #ff79DA);
 }
 #homepage .card__description:hover::after {
   opacity: 1;
-  transform: translate(-50%) scale 1.2;
+  transform: translate(-50%) scaleX(1.2) scaleY(1.2);
 }
 #homepage .card__description h3 {
   margin-left: 16px;
@@ -308,12 +310,11 @@ header {
   right: 16px;
   top: 16px;
 }
-@media (max-width: 375px) {
-  #homepage .card .menus .card {
-    width: 175px;
-    min-width: 0rem;
+@media all and (max-width: 375px) {
+  #homepage .card .menus__card {
+    width: 400px;
   }
-  #homepage .card .menus .card .card__ image {
+  #homepage .card .menus__card .card__ image {
     width: 20rem;
   }
 }
@@ -401,7 +402,7 @@ footer p {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transform: all 200ms ease-in-out;
+  transform: all 0.2ms ease-in-out;
 }
 .resto__tittle h2::after {
   display: inline-block;
@@ -420,12 +421,12 @@ footer p {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transform: all 200ms ease-in-out;
+  transform: all 0.2ms ease-in-out;
   background-image: linear-gradient(to top, #9356DC, #ff79DA);
 }
 .resto__tittle h2:hover::after {
   opacity: 1;
-  transform: translate(-50%) scale 1.2;
+  transform: translate(-50%) scaleX(1.2) scaleY(1.2);
 }
 
 .resto-main {
