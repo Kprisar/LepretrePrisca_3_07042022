@@ -72,7 +72,7 @@ header {
 .explorer h2 {
   font-size: 32px;
   margin-top: 0px;
-  padding-top: 14px;
+  padding-top: 49px;
 }
 .explorer p {
   font-size: 16px;
@@ -117,14 +117,10 @@ header {
   transform-origin: top;
 }
 .loader::after {
-  content: "";
-  height: 100px;
-  width: 100px;
-  border-right: 5px solid #FF79DA;
-  border-top: 5px solid #9356DC;
-  border-radius: 50%;
-  animation: spin 3s linear;
-  animation-iteration-count: 2;
+  content: "Oh my food";
+  font-size: 50px;
+  font-family: "Shrikhand";
+  animation: rotate-in-center 2s both;
 }
 
 @keyframes disappear {
@@ -135,9 +131,14 @@ header {
     transform: scale(0);
   }
 }
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
+@keyframes rotate-in-center {
+  0% {
+    transform: rotate(-360deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0);
+    opacity: 1;
   }
 }
 .tuto {
@@ -222,7 +223,6 @@ header {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  width: 600px;
 }
 #homepage .card__image {
   height: 16rem;
@@ -376,7 +376,7 @@ footer p {
   font-family: "Shrikhand";
   font-weight: 200;
   font-size: 30px;
-  padding-left: 24px;
+  padding-left: 30px;
   padding-top: 20px;
   background-color: #F6f6f6;
   position: relative;

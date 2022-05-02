@@ -7,7 +7,7 @@
     & h2 {
         font-size: 32px;
         margin-top: 0px;
-        padding-top: 14px;
+        padding-top: 49px;
     }
     & p {
         font-size: 16px;
@@ -41,16 +41,14 @@
     animation-delay: 2s;
     transform-origin: top;
     &::after {
-        content:"";
-        height: 100px;
-        width: 100px;
-        border-right: 5px solid $secondary;
-        border-top: 5px solid $primary;
-        border-radius: 50%;
-        animation: spin 3s linear;
-        animation-iteration-count: 2;
+        content:"Oh my food";
+        font-size: 50px;
+        font-family: "Shrikhand";
+        animation:rotate-in-center 2s both;
+        
     }
 }
+
 
 @keyframes disappear {
     0% {
@@ -61,8 +59,15 @@
     }
 }
 
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
+@keyframes rotate-in-center {
+    0% {
+        transform:rotate(-360deg);
+        opacity:0 
     }
-}
+        100% {
+            transform:rotate(0);
+            opacity:1
+        }
+    }
+    
+    
