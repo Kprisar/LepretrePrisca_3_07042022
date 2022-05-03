@@ -1,57 +1,58 @@
-
-
 .tuto {
-    counter-reset: steps;
-    margin-bottom: 32px;
-    & ol{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        @media (max-width: 950px) {
-            flex-direction: column;
-        }
-        
+  counter-reset: steps;
+  margin-bottom: 32px;
+  & ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    @media (max-width: 950px) {
+      flex-direction: column;
     }
-    & h2 {
-        margin-left: 40px;
+  }
+  & h2 {
+    margin-left: 40px;
+  }
+  & li {
+    position: relative;
+    &::before {
+      content: counter(steps);
+      counter-increment: steps;
+      color: white;
+      background-color: $primary;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      position: absolute;
+      left: -15px;
+      top: 50%;
+      transform: translateY(-50%);
     }
-    & li {
-        position: relative;
-        &::before {
-            content:counter(steps);
-            counter-increment: steps;
-            color: white;
-            background-color: $primary;
-            width: 20px;
-            height: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            position: absolute;
-            left: -15px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        
-        list-style-type: none;
-        background-color: #f6f6f6;
-        padding: 20px 32px;
-        flex-grow: 1;
-        border-radius: 16px;
-        @include base-shadow;
-        margin: 10px;
-        margin-right: 43px;
-        &:hover{
-            transform: scale(1.02);
-            opacity: 0.9;
-            cursor: pointer;
-        }
-    
-        & i.fa-solid{
-            margin-right: 20px;
-            color: $lightgrey;
-            font-size: 20px;
-        }
+
+    list-style-type: none;
+    background-color: #f6f6f6;
+    padding: 20px 32px;
+    flex-grow: 1;
+    border-radius: 16px;
+    @include base-shadow;
+    margin: 10px;
+    margin-right: 43px;
+    &:hover {
+      transform: scale(1.02);
+      opacity: 0.9;
+      cursor: pointer;
+      background-color: lighten($primary, $amount: 35);
+      i.fa-solid {
+        color: $primary;
+      }
     }
+
+    & i.fa-solid {
+      margin-right: 20px;
+      color: $lightgrey;
+      font-size: 20px;
+    }
+  }
 }
