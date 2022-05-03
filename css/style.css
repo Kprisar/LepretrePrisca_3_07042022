@@ -223,13 +223,14 @@ header {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  width: 600px;
-  padding-bottom: 34px;
+  width: 500px;
+  margin: 18px;
 }
 @media (max-width: 375px) {
   #homepage .card {
     width: 200px;
     padding-bottom: 20px;
+    margin: 0px;
   }
 }
 @media (max-width: 375px) and (min-width: 992px) {
