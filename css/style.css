@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap");
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0 0 0.5rem black;
+  padding: 6px;
+  margin: 0px;
+  position: relative;
+}
+
+.city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 10px;
+}
+.city i {
+  font-size: 22px;
+  margin-right: 15px;
+}
+
+.explorer {
+  text-align: center;
+}
+.explorer h2 {
+  font-size: 32px;
+}
+.explorer p {
+  font-size: 16px;
+}
+.explorer button {
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 32px;
+  transition: transform 200ms;
+  margin-top: 18px;
+  cursor: pointer;
+  box-shadow: 6px 6px 4px #e7e7e7;
+  background-image: linear-gradient(to top, #9356DC, #ff79DA);
+}
+.explorer button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+@media (max-width: 575px) {
+  .explorer h2 {
+    font-size: 25px;
+  }
+}
+.tuto {
+  counter-reset: steps;
+  margin-bottom: 32px;
+}
+.tuto ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+@media (max-width: 950px) {
+  .tuto ol {
+    flex-direction: column;
+  }
+}
+.tuto h2 {
+  margin-left: 40px;
+}
+.tuto li {
+  position: relative;
+  list-style-type: none;
+  background-color: #f6f6f6;
+  padding: 20px 32px;
+  flex-grow: 1;
+  border-radius: 16px;
+  box-shadow: 6px 6px 4px #e7e7e7;
+  margin: 10px;
+  margin-right: 43px;
+}
+.tuto li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  color: white;
+  background-color: #9356DC;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tuto li:hover {
+  transform: scale(1.02);
+}
+.tuto li i.fa-solid {
+  margin-right: 20px;
+  color: #7e7e7e;
+  font-size: 20px;
+}
+
+#homepage .menus {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-wrap: wrap;
+}
+#homepage .menus h2 {
+  margin-bottom: 32px;
+  margin-left: 35px;
+}
+#homepage .menus__card {
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+#homepage .card {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+#homepage .card__image {
+  height: 16rem;
+  border-radius: 15px 15px 0px 0px;
+  object-fit: cover;
+  display: flex;
+}
+#homepage .card__description {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 30rem;
+  background-color: white;
+  box-shadow: 6px 6px 4px #e7e7e7;
+  border-radius: 0px 0px 15px 15px;
+}
+#homepage .card__description::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 30px;
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  color: black;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transform: all 200ms ease-in-out;
+}
+#homepage .card__description::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+  font-size: 30px;
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transform: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, #9356DC, #ff79DA);
+}
+#homepage .card__description:hover::after {
+  opacity: 1;
+  transform: translate(-50%) scale 1.2;
+}
+#homepage .card__description h3 {
+  margin-left: 16px;
+  margin-bottom: -10px;
+  font-size: 20px;
+}
+#homepage .card__description p {
+  margin-top: 14px;
+  font-size: 15px;
+}
+#homepage .card.new {
+  position: relative;
+}
+#homepage .card.new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 30px;
+  width: 80px;
+  background-color: #99E2D0;
+  color: #1b6150;
+  text-align: center;
+  padding-top: 9px;
+  right: 16px;
+  top: 16px;
+}
+@media (max-width: 375px) {
+  #homepage .card .menus .card {
+    width: 175px;
+    min-width: 0rem;
+  }
+  #homepage .card .card__description {
+    min-width: 18rem;
+  }
+}
+
+footer {
+  background-color: #353535;
+  padding: 0px 40px;
+  color: white;
+  height: 230px;
+}
+footer h2 {
+  font-family: "Shrikhand", "sans-serif";
+  padding-top: 14px;
+  font-size: 30px;
+}
+
+.banner img {
+  display: block;
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  object-position: center bottom;
+  margin-bottom: 40px;
+}
+
+.resto__tittle h2 {
+  font-family: "Shrikhand";
+  font-weight: 200;
+  font-size: 30px;
+  padding-left: 40px;
+  padding-top: 20px;
+  background-color: #F6f6f6;
+  position: relative;
+  margin-top: -57px;
+  border-radius: 20px 20px 0px 0px;
+  margin-bottom: 0px;
+}
+
+.resto-main {
+  background-color: #F6f6f6;
+  height: 140px;
+}
+.resto-main h3 {
+  margin-top: 0px;
+  margin-left: 23px;
+  padding-top: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+}
+.resto-main h3::after {
+  content: "";
+  position: absolute;
+  top: 43px;
+  height: 0.25rem;
+  width: 50px;
+  left: 1px;
+  background-color: #99E2D0;
+}
+
+p {
+  margin-top: 5px;
+  padding: 0px 18px;
+  font-size: 14px;
+}
+
+.menus__simple {
+  margin-right: 20px;
+}
+
+.menus__category {
+  background-color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-radius: 20px;
+  margin-left: 20px;
+  filter: drop-shadow(2px 1px 5px #7e7e7e);
+}
+.menus__category .menus-item {
+  display: flex;
+  height: 63px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menus__category .menus-item__check {
+  background-color: #99E2D0;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  margin-right: -55px;
+  width: 55px;
+  border-radius: 0px 16px 16px 0px;
+  transition: margin-right 0.5s;
+  flex-shrink: 0;
+}
+.menus__category .menus-item__check i {
+  display: flex;
+  align-items: center;
+  place-content: center;
+  background: white;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  color: #99E2D0;
+}
+.menus__category .menus-item__check:hover {
+  animation: animation-name;
+}
+@keyframes quarterspin {
+  0% {
+    transform: rotate -270deg;
+  }
+  100% {
+    transform: rotate 0;
+  }
+}
+
+:hover .menus-item__check {
+  margin-right: 0px;
+  cursor: pointer;
+}
+
+.menus-item__description {
+  overflow: hidden;
+}
+.menus-item__description h4 {
+  font-size: 200;
+  margin-top: 6px;
+  margin-bottom: 0px;
+  padding: 5px 0px 0px 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menus-item__description p {
+  margin-top: 5px;
+  padding: 0px 18px;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menus-item__prix {
+  margin-left: auto;
+  font-weight: 900;
+  padding: 16px;
+  display: flex;
+  padding-top: 28px;
+}
+
+section.order {
+  height: 40vh;
+  display: grid;
+  place-items: center;
+}
+section.order button {
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 32px;
+  transition: transform 200ms;
+  margin-top: 18px;
+  cursor: pointer;
+  box-shadow: 6px 6px 4px #e7e7e7;
+  background-image: linear-gradient(to top, #9356DC, #ff79DA);
+}
+section.order button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
