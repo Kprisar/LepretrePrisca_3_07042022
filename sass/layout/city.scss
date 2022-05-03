@@ -1,6 +1,7 @@
 
 
-.city{
+.city {
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,8 +9,19 @@
     background-color: #f3f3f3;
     text-align: center;
     padding: 10px;
+    height: 35px;
+    
+    & input {
+        flex-basis: 300px;
+        border: 0px;
+        background-color: #f3f3f3;
+        font-size: 20px;
+        
+    }
+    
     & i{
         font-size: 22px;
         margin-right: 15px;
+        margin-left: 144px;
     }
 }

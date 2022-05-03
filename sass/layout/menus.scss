@@ -3,6 +3,7 @@
 
 #homepage {
     
+    
     .menus {
         background-color: #f6f6f6;
         display: flex;
@@ -21,8 +22,10 @@
             flex-wrap: wrap;
             padding-right: 30px;
             padding-left: 30px;
+            padding-bottom: 44px;
             }  
-        }        
+        } 
+          
     
             
     .card {
@@ -96,10 +99,12 @@
         .menus .card {
             width:175px;
             min-width: 0rem;
+        
+        .card__ image {
+            width: 20rem;
         }
-        .card__description {
-            min-width: 18rem;
-        }
+    }
+       
     }
 }
 }
