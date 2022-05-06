@@ -6,21 +6,19 @@
   margin: 0px;
   position: relative;
   font-size: 22px;
-  ::before {
+  &:hover::before {
+    @include transform-zoom(1.2, translateY(-50%));
+  }
+  &::before {
     @include font-awesome($font-weight: 900);
     content: "\f060";
     left: 30px;
     top: 50%;
     transform: translateY(-50%);
-    transition: transform 200ms;
     font-size: 30px;
-    &:hover::before {
-      @include transform-zoom(
-        $zoom-level: 1.2,
-        $transformation: translateY(-50%)
-      );
-    }
+    transition: transform 200ms;
   }
+    
 }
 
 .banner img {
