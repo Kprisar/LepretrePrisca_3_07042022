@@ -52,5 +52,4 @@ Validation W3C HTML : à passer
 Validation W3C CSS : à passer
 Compatibilité : dernières versions de Chrome et Firefox
 
-Convention nommage commit
 
