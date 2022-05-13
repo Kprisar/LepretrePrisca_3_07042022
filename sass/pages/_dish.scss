@@ -1,0 +1,85 @@
+.dish {
+  @for $i from 2 through 4 {
+    &:nth-child(#{$i}) {
+      animation-delay: 150ms * $i;
+    }
+  }
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-radius: 20px;
+  margin-left: 20px;
+  filter: drop-shadow(2px 1px 5px $lightgrey);
+  animation: appear 1s;
+  animation-fill-mode: both;
+  display: flex;
+  height: 63px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  &__check {
+    background-color: $tertiary;
+    $button-width: 55px;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    margin-right: -1 * $button-width;
+    width: $button-width;
+    border-radius: 0px 16px 16px 0px;
+    transition: margin-right 0.5s;
+    flex-shrink: 0;
+  }
+
+  i {
+    display: flex;
+    align-items: center;
+    place-content: center;
+    background: white;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    color: $tertiary;
+  }
+
+  &:hover {
+    cursor: pointer;
+    .dish__check {
+      margin-right: 0px;
+    }
+
+    i {
+      animation: quaterspin 0.6s ease-in-out;
+    }
+  }
+
+  &__description {
+    overflow: hidden;
+
+    h4 {
+      font-size: 18px;
+      margin-top: 6px;
+      margin-bottom: 0px;
+      padding: 5px 0px 0px 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    & p {
+      margin-top: 5px;
+      padding: 0px 18px;
+      font-size: 14px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__price {
+    margin-left: auto;
+    font-weight: 900;
+    padding: 16px;
+    display: flex;
+  }
+}

@@ -1,18 +1,17 @@
+footer {
+  background-color: #353535;
+  padding: 0px 40px;
+  color: white;
+  margin-top: -22px;
+  height: 168px;
 
-@import"../utils/mixins.scss";
+  h2 {
+    font-family: "Shrikhand", "sans-serif";
+    padding-top: 14px;
+    font-size: 20px;
+  }
 
-
-
-footer{
-    background-color:$darkgrey;
-    padding: 0px 40px;
-    color: white;
-    height: 230px;
-
-    
-    h2{
-        font-family:"Shrikhand", "sanns-serif";
-        padding-top: 14px;
-        font-size: 30px;
-    }
+  p {
+    font-size: 12px;
+  }
 }
