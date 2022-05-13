@@ -32,6 +32,9 @@ Le visiteur peut ajouter les plats qu'il souhaite à sa commande en cliquant des
 HTML / Sass
 Interdit: Javascript / Frameworks CSS / Boostrap
 
+Technologies used:
+HTML, CSS, keyframces, mixins, npm sript, PostCSS, Autoprefixer
+
 Polices :
 Logo & titres: Shrikhand
 Texte: Roboto
