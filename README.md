@@ -33,7 +33,7 @@ HTML / Sass
 Interdit: Javascript / Frameworks CSS / Boostrap
 
 Technologies used:
-HTML, CSS, keyframces, mixins, npm sript, PostCSS, Autoprefixer
+HTML, CSS, keyframes, mixins, npm script, PostCSS, Autoprefixer
 
 Polices :
 Logo & titres: Shrikhand
